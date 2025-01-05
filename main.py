@@ -400,7 +400,7 @@ def overall_enrich_function(data):
 
     def fakebert(df):
         # Load the saved model
-        model = torch.load('model/fake_bert_model_cpu.pkl', map_location=torch.device('cpu'))
+        model = torch.load('model/fake_bert_model.pkl', map_location=torch.device('cpu'))
 
         # Load the BERT tokenizer
         tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
