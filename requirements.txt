@@ -1,0 +1,8 @@
+streamlit
+nltk
+scikit-learn
+newspaper4k
+symspellpy
+torch
+transformers
+lxml_html_clean
