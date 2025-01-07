@@ -545,9 +545,6 @@ def overall_enrich_function(data):
 st.markdown(
     """
     <style>
-    body {
-        background-color: #FAF9F6; /* Light gray background */
-    }
     div.stButton > button:first-child {
         background-color: green;
         color: white;
@@ -565,9 +562,17 @@ st.markdown(
 )
 
 st.title("Fake News Detection")
-st.write("Our fake news detection system leverages the power of three integrated approaches to provide accurate and reliable predictions for English-language content. By combining advanced machine learning algorithms, linguistic analysis, and contextual verification, we ensure a robust solution to identify and combat misinformation effectively.")
-user_input_title = st.text_area("Input news title:", height=100)
-user_input_text = st.text_area("Input news text:", height=200)
+st.markdown(
+    """
+    <div style="text-align: justify;">
+        Our fake news detection system leverages the power of three integrated approaches to provide accurate and reliable predictions for English-language content. By combining advanced machine learning algorithms, linguistic analysis, and contextual verification, we ensure a robust solution to identify and combat misinformation effectively.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.write("_Disclaimer: The results are based on automated predictions and may not always be accurate. Users should verify information independently._")
+user_input_title = st.text_area("**Input news title:**", height=100)
+user_input_text = st.text_area("**Input news text:**", height=200)
 
 # Create the DataFrame
 df = pd.DataFrame({'title': [user_input_title], 'text': [user_input_text], 'date': [" "] })
