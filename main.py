@@ -565,6 +565,7 @@ st.markdown(
 )
 
 st.title("Fake News Detection")
+st.write("Our fake news detection system leverages the power of three integrated approaches to provide accurate and reliable predictions for English-language content. By combining advanced machine learning algorithms, linguistic analysis, and contextual verification, we ensure a robust solution to identify and combat misinformation effectively.")
 user_input_title = st.text_area("Input news title:", height=100)
 user_input_text = st.text_area("Input news text:", height=200)
 
