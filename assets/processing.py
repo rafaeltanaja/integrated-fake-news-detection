@@ -21,14 +21,14 @@ import torch
 import torch.nn as nn
 from transformers import AutoModel, BertTokenizerFast
 import pickle
+
+nltk.download('brown', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True)
+nltk.download('wordnet', quiet=True)
     
 def process(df):
-    nltk.download('brown', quiet=True)
-    nltk.download('punkt_tab', quiet=True)
-    nltk.download('stopwords', quiet=True)
-    nltk.download('punkt', quiet=True)
-    nltk.download('wordnet', quiet=True)
-
     # https://today.yougov.com/politics/articles/49552-trust-in-media-2024-which-news-outlets-americans-trust
     american_trusted_sources = ['weather.com', 'bbc.com', 'pbs.org', 'wsj.com',
                                         'forbes.com', 'abcnews.go.com', 'apnews.com', 'cbsnews.com',
