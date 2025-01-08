@@ -3,6 +3,7 @@ nltk
 scikit-learn
 newspaper4k
 symspellpy
-torch
+torch==2.4.1
 transformers
 lxml_html_clean
+numpy==1.26.4
