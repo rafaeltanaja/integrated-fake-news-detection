@@ -66,14 +66,14 @@ if st.button("Continue"):
         
         col4, col5 = st.columns(2)
         
-        col1.metric("FakeBERT Predictions", final_enriched_data['fake_bert_prediction'])
-        col2.metric("Lexical Diversity Rate",  f"{final_enriched_data['dynamic_weighted_mean_similarity'].iloc[0]:.2f}")
-        col3.metric("Spell Score Rate", f"{final_enriched_data['spell_score'].iloc[0]:.2f}")
-        col4.metric("Sentiment Score Rate", f"{final_enriched_data['sentiment_score'].iloc[0]:.2f}")
-        col5.metric("Weighted Mean Cosine Similarity", f"{final_enriched_data['dynamic_weighted_mean_similarity'].iloc[0]:.2f}")
+        col1.metric("FakeBERT Predictions", final_enriched_data['fake_bert_prediction'], border=True)
+        col2.metric("Lexical Diversity Rate",  f"{final_enriched_data['dynamic_weighted_mean_similarity'].iloc[0]:.2f}", border=True)
+        col3.metric("Spell Score Rate", f"{final_enriched_data['spell_score'].iloc[0]:.2f}", border=True)
+        col4.metric("Sentiment Score Rate", f"{final_enriched_data['sentiment_score'].iloc[0]:.2f}", border=True)
+        col5.metric("Weighted Mean Cosine Similarity", f"{final_enriched_data['dynamic_weighted_mean_similarity'].iloc[0]:.2f}", border=True)
         
         st.header(f"Final Results:")
-        st.metric("Predictions", f"{string}")
+        st.metric("Predictions", f"{string}", border=True)
 
         url_list = final_enriched_data[['scraped_news_1_url', 'scraped_news_2_url', 'scraped_news_3_url']].values.flatten().tolist()
 
@@ -82,6 +82,6 @@ if st.button("Continue"):
         for i, url in enumerate(url_list, 1):
             if pd.notna(url):
                 st.write(url)
-                st.metric("Cosine Similarity Score", f"{final_enriched_data[f'similarity_score{i}'].iloc[0]:.2f}")
+                st.metric("Cosine Similarity Score", f"{final_enriched_data[f'similarity_score{i}'].iloc[0]:.2f}", border=True)
                 
             

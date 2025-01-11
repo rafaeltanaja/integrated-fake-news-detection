@@ -1,5 +1,8 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
+import torch
+import torch.nn as nn
+from transformers import AutoModel, BertTokenizerFast
 
 class BERT_Arch(torch.nn.Module):
     def __init__(self, bert_model_name):
