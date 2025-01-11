@@ -192,7 +192,7 @@ def process(df):
                     response = requests.request(
                         'POST',
                         'https://realtime.oxylabs.io/v1/queries',
-                        auth=('testing1_vjpCR', 'Oxylabku123_'),
+                        auth=('johnny_s341G', 'Passwordnya_123'),
                         json=payload,
                     )
                     if response.status_code == 200:
