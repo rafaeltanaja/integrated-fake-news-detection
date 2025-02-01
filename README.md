@@ -1,5 +1,3 @@
-# integrated-fake-news-detection
-
 # Integrated Fake News Detection
 
 ## Introduction
